@@ -3,7 +3,7 @@ export async function sendMessageToGPT(messages, systemMessage) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: "Bearer YOUR_OPENAI_API_KEY"
+      Authorization: `Bearer ${import.meta.env.VITE_OPENAI_API_KEY}`
     },
     body: JSON.stringify({
       model: "gpt-4",
@@ -16,6 +16,7 @@ export async function sendMessageToGPT(messages, systemMessage) {
       ]
     })
   });
+
   const data = await res.json();
-  return data?.choices?.[0]?.message?.content || "Something went wrong.";
+  return data?.choices?.[0]?.message?.content || "Sorry, something went wrong.";
 }
