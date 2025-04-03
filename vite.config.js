@@ -5,7 +5,7 @@ export default defineConfig({
   base: "./", // ← THIS is the important fix
   plugins: [react()],
   css: {
-    postcss: './postcss.config.js'
+    postcss: './postcss.config.cjs'
   },
   server: {
     host: true,
