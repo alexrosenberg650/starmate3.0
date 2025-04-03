@@ -6,11 +6,12 @@ export default function StarMateApp() {
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState("");
 
-  const personas = [
-    { name: "Jae", role: "Global Pop Idol", avatar: "/jae.png" },
-    { name: "Elias", role: "Brooding Actor", avatar: "/elias.png" },
-    { name: "Chase", role: "Charismatic Protector", avatar: "/chase.png" }
-  ];
+const personas = [
+  { name: "Jae", role: "Global Pop Idol", avatar: "/jae.png" },
+  { name: "Elias", role: "Brooding Actor", avatar: "/elias.png" },
+  { name: "Chase", role: "Charismatic Protector", avatar: "/chase.png" }
+];
+
 
   const getPersonaPrompt = (name) => {
     if (name === "Jae") return "You are Jae, a sweet and romantic pop idol.";
